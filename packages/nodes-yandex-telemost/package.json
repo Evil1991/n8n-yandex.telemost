@@ -1,0 +1,42 @@
+{
+  "name": "n8n-nodes-yandex-telemost",
+  "version": "0.1.0",
+  "description": "n8n community node for Yandex Telemost API",
+  "author": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "keywords": [
+    "n8n-community-node",
+    "n8n",
+    "yandex",
+    "telemost"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -w -p tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "n8n-workflow": "^1.50.0",
+    "n8n-core": "^1.50.0"
+  },
+  "n8n": {
+    "credentials": [
+      "dist/credentials/YandexOAuth2Api.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/YandexTelemost/YandexTelemost.node.js"
+    ]
+  }
+}
