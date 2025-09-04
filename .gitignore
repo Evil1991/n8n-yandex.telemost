@@ -1,0 +1,22 @@
+# Node
+node_modules/
+.dist/
+dist/
+coverage/
+.nyc_output/
+
+# Build artifacts
+*.log
+*.tmp
+*.cache
+
+# OS
+.DS_Store
+
+# JetBrains
+.idea/
+*.iml
+
+# n8n
+.local/
+
